@@ -24,7 +24,7 @@ const LoginScreen = () => {
                 style={styles.input}
                 placeholder="Password"
                 secureTextEntry
-                onChangeText={(text) => setPassword(text)}
+                onChangeText={(text) => setPassword(text)} 
                 value={password}
             />
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
