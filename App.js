@@ -1,12 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { SafeAreaView } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
-
+import GetStartedScreen from './src/components/Screens/GetStartedScreen';
+import HomePageScreen from './src/components/Screens/HomePageScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default function App() {
+  const Stack = createNativeStackNavigator();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <SafeAreaView style={{ flex: 1 }}>
+    //   <LoginScreen />
+    // </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="GetStarted">
+        <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="HomePage" component={HomePageScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
