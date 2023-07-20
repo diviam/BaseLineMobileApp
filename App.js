@@ -9,12 +9,9 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
-    // <SafeAreaView style={{ flex: 1 }}>
-    //   <LoginScreen />
-    // </SafeAreaView>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="GetStarted">
-        <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Stack.Screen name="HomePage" component={HomePageScreen} />
       </Stack.Navigator>
     </NavigationContainer>
