@@ -5,14 +5,14 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 const GetStartedScreen = ({ navigation }) => {
     console.log("test");
     const handleGetStartedPress = () => {
-        navigation.navigate('HomePage');
+        navigation.navigate('WebDesigning');
     };
 
     return (
         <View style={styles.container}>
             {/* Logo image */}
             <Image source={require('../../../assets/splash.png')} style={styles.logo} />
-            <Text style={styles.header}>Welcome thhgo Baseline IT Development</Text>
+            <Text style={styles.header}>Welcome to Baseline IT Development</Text>
             <TouchableOpacity style={styles.button} onPress={handleGetStartedPress}>
                 <Text style={styles.buttonText}>Get Started</Text>
             </TouchableOpacity>
