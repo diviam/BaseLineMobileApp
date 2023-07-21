@@ -58,6 +58,7 @@ const HomePage = () => {
                 <Text style={styles.contactText}>Phone: (+91) 734-074-0007</Text>
                 {/* Add more contact information as needed */}
             </View>
+            <ServiceCard />
                 {/* <FontAwesome5 name="arrow-right" size={20} color="#333" style={styles.arrowIcon} />
                 <Text style={styles.contactUsTitle}>Contact Us</Text> */}
             
