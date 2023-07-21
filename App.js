@@ -14,7 +14,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="GetStarted">
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="HomePage" component={HomePageScreen} />
+        <Stack.Screen name="HomePage" component={HomePageScreen} options={{ headerShown: false }} />
         <Stack.Screen name="WebDesigning" component={WebDesigning} />
         <Stack.Screen name="ContactUs" component={ContactUs} />
       </Stack.Navigator>
@@ -22,7 +22,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({ 
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',

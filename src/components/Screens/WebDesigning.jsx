@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/Feather";
 
-const WebDesigning = () => {
+const WebDesigning = ({ navigation }) => {
   return (
     <View style={{ padding: 20 }}>
       <ScrollView>
@@ -99,7 +99,7 @@ const WebDesigning = () => {
           </Text>
         </View>
         <Text style={styles.headingText}>Still Unsure ?</Text>
-        <Button title="Contact Us" color="#bb372a" width="200" />
+        <Button title="Contact Us" color="#bb372a" width="200"  onPress={() => navigation.navigate('ContactUs')} />
       </ScrollView>
     </View>
   );
