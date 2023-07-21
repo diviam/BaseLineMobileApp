@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 const GetStartedScreen = ({ navigation }) => {
     const handleGetStartedPress = () => {
-        navigation.navigate('WebDesigning');
+        navigation.navigate('HomePage');
     };
 
     return (
