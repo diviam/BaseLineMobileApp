@@ -3,7 +3,6 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 const GetStartedScreen = ({ navigation }) => {
-    console.log("test");
     const handleGetStartedPress = () => {
         navigation.navigate('WebDesigning');
     };
@@ -11,8 +10,7 @@ const GetStartedScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             {/* Logo image */}
-            <Image source={require('../../../assets/splash.png')} style={styles.logo} />
-            <Text style={styles.header}>Welcome to Baseline IT Development</Text>
+            <Image source={require('../../../assets/baselinelogo.png')} style={styles.logo} />
             <TouchableOpacity style={styles.button} onPress={handleGetStartedPress}>
                 <Text style={styles.buttonText}>Get Started</Text>
             </TouchableOpacity>
@@ -29,8 +27,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
     },
     logo: {
-        width: 100,
-        height: 100,
+        width: 400,
+        height: 120,
         marginBottom: 20,
     },
     header: {
@@ -39,7 +37,10 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     button: {
-        backgroundColor: '#3498db',
+        position: 'absolute',
+        bottom: 20,
+        right: 20,
+        backgroundColor: '#bb372a',
         padding: 15,
         borderRadius: 5,
     },

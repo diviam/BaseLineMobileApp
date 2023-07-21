@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import GetStartedScreen from './src/components/Screens/GetStartedScreen';
 import HomePageScreen from './src/components/Screens/HomePageScreen';
 import WebDesigning from './src/components/Screens/WebDesigning';
+import ContactUs from './src/components/Screens/ContactUsScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default function App() {
@@ -15,8 +16,9 @@ export default function App() {
         <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerShown: false }} />
         <Stack.Screen name="HomePage" component={HomePageScreen} />
         <Stack.Screen name="WebDesigning" component={WebDesigning} />
+        <Stack.Screen name="ContactUs" component={ContactUs} />
       </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>  
   );
 }
 
