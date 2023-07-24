@@ -4,7 +4,7 @@ import { Card, Title, Paragraph } from 'react-native-paper';
 import { FontAwesome5 } from 'react-native-vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-const ServiceCard = ({ icon, title, content }) => {
+const ServiceCards = ({ icon, title, content }) => {
     const navigation = useNavigation();
 
     const handleCardPress = () => {
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ServiceCard;
+export default ServiceCards;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity } from 'react-native';
-import ServiceCard from '../Common/component/Service';
+import ServiceCards from '../Common/component/Service';
 import { FontAwesome5 } from 'react-native-vector-icons';
 import { useNavigation } from '@react-navigation/native';
-
+import { ServiceCard } from './ServiceCard';
 const HomePage = () => {
     const navigation = useNavigation();
 
@@ -42,7 +42,7 @@ const HomePage = () => {
             <View style={styles.servicesSection}>
                 <Text style={styles.sectionHeading}>Our <Text style={styles.redColor}>Services</Text></Text></View>
             {ourServiceData.map((item, index) =>
-                <View key={index}><ServiceCard
+                <View key={index}><ServiceCards
                     icon={item?.icon} // Replace with your desired icon name from FontAwesome5
                     title={item?.title}
                     content={item?.content}
@@ -50,7 +50,7 @@ const HomePage = () => {
             )}
 
             {/* Contact Section */}
-        
+
             <View style={styles.contactUsContainer}>
                 <FontAwesome5 name="arrow-right" size={20} color="#333" style={styles.arrowIcon} onPress={handleContactUsPress} />
                 <Text style={styles.sectionHeading}>Contact <Text style={styles.redColor}>Us</Text></Text>
@@ -59,9 +59,9 @@ const HomePage = () => {
                 {/* Add more contact information as needed */}
             </View>
             <ServiceCard />
-                {/* <FontAwesome5 name="arrow-right" size={20} color="#333" style={styles.arrowIcon} />
+            {/* <FontAwesome5 name="arrow-right" size={20} color="#333" style={styles.arrowIcon} />
                 <Text style={styles.contactUsTitle}>Contact Us</Text> */}
-            
+
         </ScrollView>
     );
 };
